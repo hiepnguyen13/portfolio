@@ -1,0 +1,130 @@
+// @import 'functions';
+
+// Container
+.container {
+  max-width: $web-w;
+  padding: 0 1.5rem;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+// Padding
+.py {
+  &-1 {
+    padding: 1rem 0;
+  }
+
+  &-2 {
+    padding: 2rem 0;
+  }
+
+  &-3 {
+    padding: 3rem 0;
+  }
+
+  &-4 {
+    padding: 4rem 0;
+  }
+}
+
+// Margin
+.my {
+  &-1 {
+    margin: 1rem 0;
+  }
+
+  &-2 {
+    margin: 2rem 0;
+  }
+
+  &-3 {
+    margin: 3rem 0;
+  }
+
+  &-4 {
+    margin: 4rem 0;
+  }
+}
+
+// Button
+%btn--shared {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  transition: all 0.5s;
+  border: none;
+  cursor: pointer;
+}
+
+.btn {
+  &--main {
+    @extend %btn--shared;
+    color: #333;
+    background: $main-clr;
+  }
+
+  &--light {
+    @extend %btn--shared;
+    color: #333;
+    background: $light-clr;
+  }
+
+  &--dark {
+    @extend %btn--shared;
+    color: #f4f4f4;
+    background: $dark-clr;
+  }
+}
+
+[class^='btn--']:hover,
+button[class^='btn--']:focus {
+  background: $main-clr;
+}
+
+// Background
+.bg {
+  &--main {
+    background: $main-clr;
+    color: setTextColor($main-clr);
+  }
+
+  &--dark {
+    background: $dark-clr;
+    color: setTextColor($dark-clr);
+  }
+
+  &--light {
+    background: $light-clr;
+    color: setTextColor($light-clr);
+  }
+
+  &--medium {
+    background: $medium-clr;
+    color: setTextColor($medium-clr);
+  }
+}
+
+.text--lead {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+}
+
+.center {
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 100;
+  text-transform: uppercase;
+  display: block;
+  padding-bottom: 0.5rem;
+  text-align: center;
+}
+
+.bottom-line {
+  height: 2px;
+  width: 3rem;
+  background: $main-clr;
+  display: block;
+  margin: 0 auto 1rem;
+}
